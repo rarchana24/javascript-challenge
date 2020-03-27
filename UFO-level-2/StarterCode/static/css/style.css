@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, 'Segoe UI';
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 130px;
+  overflow: auto;
+}
+
+/* The footer is positioned at the bottom of the page */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100px;
+  background: #4e5d6c;
+}
+
+/* The code styles the text at the bottom of the footer */
+.footer > .bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background: #1b3146;
+}
+
+.navbar {
+  padding: 5px;
+  margin: 0;
+}
+
+/* This CSS styles the ufo icon in the navbar */
+.nav-ufo {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  width: 35px;
+  color:white;
+}
+
+/* Adding styles to the aside and filter form */
+.ufo-form {
+  margin-top: 50px;
+}
+.filters .panel-heading{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.filters .panel-body {
+  padding: 10;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+select {
+  /*display: block;*/
+  display: -webkit-inline-box;
+  width: 10%;
+  padding: 2px;
+  /*color: #8e979f;*/
+  color:green;
+  outline:15px;
+}
+
+#table-area th {
+  border: 2px solid yellow;
+  text-align: center;
+  font-size: 15px;
+  margin-left: 100px;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 90px;
+}
+
+.loader {
+  margin-top: 50px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+/* The styles for the parallax */
+.hero {
+  position: relative;
+  height: 550px;
+  padding: 20px;
+  margin: 0;
+  background: black;
+  background-image: url("../images/nasa.jpg");
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.hero h1 {
+  margin-top: 200px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+}
+
+.hero p {
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+}
+
+/* input placeholder color changes */
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: orange;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8e979f;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #8e979f;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8e979f;
+}
+
+/* media queries which will only be activated at specific screen sizes */
+@media (max-width: 800px) {
+  #table-area td {
+    font-size: 14em;
+  }
+}
+
+@media (max-width: 500px) {
+  #table-area thead {
+    display: table-header-group;
+  }
+
+  #table-area tr td:first-child {
+    font-size: 5em;
+    font-weight: bold;
+    background: #1b3146;
+  }
+
+  #table-area tr td:last-child {
+    margin-bottom: 20px;
+  }
+
+  #table-area tr td:last-child::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    content: " ";
+    /*background: aliceblue;*/
+    background: red;
+  }
+
+  #table-area td {
+    font-size: 4.25em;
+  }
+
+  #table-area tbody td {
+    display: block;
+    text-align: center;
+    font:10px;
+  }
+
+  #table-area tbody td::before {
+    display: block;
+    font-size: 10.4em;
+    font-weight: bold;
+    text-align: center;
+    content: attr(data-th);
+  }
+
+  .hero h1 {
+    animation: smaller-title 1.2s forwards linear;
+  }
+}
+
+/* keyframe animations which will be used to animate the title */
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 7.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 5.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* added from internet*/
+ul#horizontal-list {
+	min-width: 5px;
+	list-style: none;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  color:orange;
+	}
+	ul#horizontal-list li {
+		display: inline;
+  }
+  #filter-btn{
+    color:orange;
+    margin-left: 500px;
+  }
+#ufo-table {
+  text-align: center;
+}
